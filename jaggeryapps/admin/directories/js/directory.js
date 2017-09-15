@@ -413,7 +413,7 @@ function populateAgentConnection(domain) {
         success: function (data) {
             $("#noconnectiondiv").show();
             $("#downloadGuide").show();
-            if (data) {
+            if (data && data.trim() != "") {
                 var resp;
                 try {
                     resp = $.parseJSON(data);
